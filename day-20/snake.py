@@ -8,13 +8,18 @@ LEFT = 180
 class Snake:
     def __init__(self):
        self.total_segment = []
+       self.create_snake()
     def create_snake(self):
-        for _ in POSITIONING:
-            new_segment = Turtle("square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(_)
-            self.total_segment.append(new_segment)
+        for position in POSITIONING:
+            self.add_segment(position )
+    def add_segment(self,position):
+        new_segment = Turtle("square")
+        new_segment.color("white")
+        new_segment.penup()
+        new_segment.goto(position)
+        self.total_segment.append(new_segment)
+    def append(self):
+        self.add_segment(self.total_segment[-1].position())
     def move_snake(self):
         for seg_num in range(len(self.total_segment) - 1, 0, -1):  # starting,ending and gap
             new_x = self.total_segment[seg_num - 1].xcor()
