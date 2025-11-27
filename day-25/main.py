@@ -5,10 +5,10 @@
 # with open("weather_data - Sheet1 (1).csv",mode = "r")as file:
 #     file_content = csv.reader(file)
 #     temperature = []
-#     for row in file_content:
-#         if row[1] != "temp":
-#             temperature.append(int(row[1]))
-#         print(row)
+#     for x in file_content:
+#         if x[1] != "temp":
+#             temperature.append(int(x[1]))
+#         print(x)
 #     print(temperature)
 
 # import pandas
@@ -37,19 +37,19 @@
 # print(my_dataframe)
 # my_dataframe.to_csv("DataFrame.csv ")
 
-import pandas
-data = pandas.read_csv("squarrel.csv")
-gray = len(data[data["Primary Fur Color"] == "Gray"])
-red = len(data[data["Primary Fur Color"] == "Cinnamon"])
-black = len(data[data["Primary Fur Color"] == "Black"])
-print(gray,red,black)
-
-dict = {
-    "Color":["Gray","Cinnamon","Black"],
-    "Count":[gray,red,black]
-}
-df = pandas.DataFrame(dict)
-print(df)
-
-df.to_csv("squirel.csv")
-#dataframe is 2-d and series is 1-d
+# import pandas
+# data = pandas.read_csv("squarrel.csv")
+# gray = len(data[data["Primary Fur Color"] == "Gray"])
+# red = len(data[data["Primary Fur Color"] == "Cinnamon"])
+# black = len(data[data["Primary Fur Color"] == "Black"])
+# print(gray,red,black)
+#
+# dict = {
+#     "Color":["Gray","Cinnamon","Black"],
+#     "Count":[gray,red,black]
+# }
+# df = pandas.DataFrame(dict)
+# print(df)
+#
+# df.to_csv("squirel.csv")
+# #dataframe is 2-d and series is 1-d
